@@ -16,4 +16,10 @@ for line in file:
 arr_total.append(total)
 print(max(arr_total))
 
+# part two for top 3
+
+arr_total.sort(reverse=True)
+top3 = arr_total[0] + arr_total[1] + arr_total[2]
+
+print(top3)
 
