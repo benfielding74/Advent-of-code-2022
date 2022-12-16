@@ -23,8 +23,8 @@ with open("input.txt") as file:
 
 for l in process:
     move_arr = []
-    #this doesn't work for numbers over 9
-    for i in l:
+    arr = l.split(' ')
+    for i in arr:
         if i.isdigit():
             move_arr.append(i)
     move, fr, to = move_arr
