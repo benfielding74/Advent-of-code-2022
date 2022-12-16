@@ -30,7 +30,8 @@ for l in process:
     move, fr, to = move_arr
     # move times take an element from key fr to key to
     for crane in range(int(move)):
-        crate = starting_stack[fr][-1]
-        starting_stack[fr].pop()
-        starting_stack[to].append(crate)
+        crate = starting_stack[fr][-int(move):]
+        # need to remove these items from the fr stack and add to the to stack
+        starting_stack[fr] = starting_stack[fr][:-int(move)]
+        starting_stack[to].extend(crate)
 print(starting_stack)
